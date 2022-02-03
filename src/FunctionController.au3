@@ -11,9 +11,10 @@ Func _isKeyReleased($sKeyHexCode)
 EndFunc
 
 Func _isKeyPressed($sKeyHexCode)
+    Local Const $KF_UP = 0x8000
     Local $aReturn = DllCall('user32.dll', 'short', 'GetAsyncKeyState', 'int', '0x' & $sKeyHexCode)
 
-    Return BitAND($aReturn[0], 0x8000) <> 0
+    Return BitAND($aReturn[0], $KF_UP) <> 0
 EndFunc
 
 Func _isMouseOnGui($hGui)

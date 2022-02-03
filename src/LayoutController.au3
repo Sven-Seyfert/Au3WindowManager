@@ -60,9 +60,9 @@ Func _layoutTen()
     Local $iWidthFullHd  = 1920
     Local $iHeightFullHd = 1080
 
-    _moveWindowSpecialLayout($iBorderSize,    $iBorderSize,   $iWidthFullHd - $iBorderSize * 2,   $iHeightFullHd - $iBorderSize * 2)
-    _moveWindowSpecialLayout($iWidthFullHd,   0,              $iWidth - $iWidthFullHd,            $iHeight / 2)
-    _moveWindowSpecialLayout($iWidthFullHd,   $iHeight / 2,   $iWidth - $iWidthFullHd,            $iHeight / 2)
+    _moveWindowSpecialLayout(0,               0,              $iWidthFullHd,             $iHeightFullHd)
+    _moveWindowSpecialLayout($iWidthFullHd,   0,              $iWidth - $iWidthFullHd,   $iHeight / 2)
+    _moveWindowSpecialLayout($iWidthFullHd,   $iHeight / 2,   $iWidth - $iWidthFullHd,   $iHeight / 2)
 EndFunc
 
 Func _layoutEleven()

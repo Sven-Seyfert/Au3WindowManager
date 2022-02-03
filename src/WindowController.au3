@@ -30,11 +30,12 @@ EndFunc
 
 Func _createPreviewOverlayGui($iX, $iY, $iW, $iH)
     Local $sTitle = 'PreviewOverlayGui'
+    Local $sWindowSizeAndPositionText = Round($iW) & 'x' & Round($iH) & ' (' & Round($iX) & ';' & Round($iY) & ')'
 
     $hGui = GUICreate($sTitle, $iW, $iH, $iX, $iY, $WS_POPUP, $WS_EX_TOPMOST + $WS_EX_TRANSPARENT)
     GUISetFont(36, 700, Default, 'Consolas')
     GUISetBkColor(0xFF0000)
-    GUICtrlCreateLabel(Round($iW) & 'x' & Round($iH) & ' (' & Round($iX) & ';' & Round($iY) & ')', 30, 30)
+    GUICtrlCreateLabel($sWindowSizeAndPositionText, 30, 30)
 
     WinSetTrans($sTitle, '', 80)
     GUISetState(@SW_SHOW)

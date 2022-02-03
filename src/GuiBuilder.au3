@@ -1,24 +1,24 @@
 Func _createLayoutChoiceGui()
-    Local $vStyle = $BS_CENTER + $BS_MULTILINE + $BS_VCENTER
+    Local $vButtonStyle = $BS_CENTER + $BS_MULTILINE + $BS_VCENTER
     Local $iW     = 400
     Local $iH     = 500
 
-    $hGui = GUICreate('', $iW, $iH, Default, Default, $WS_POPUP)
+    $hGui = GUICreate('', $iW, $iH, Default, Default, $WS_POPUP, $WS_EX_TOPMOST)
     GUISetFont(Default, Default, Default, 'Consolas')
 
-    Local $cButtonLayoutOne    = GUICtrlCreateButton($sLayoutOne,     0,               0,               $iW / 3,     $iH / 4,   $vStyle)
-    Local $cButtonLayoutTwo    = GUICtrlCreateButton($sLayoutTwo,     $iW / 3,         0,               $iW / 3,     $iH / 4,   $vStyle)
-    Local $cButtonLayoutThree  = GUICtrlCreateButton($sLayoutThree,   ($iW / 3) * 2,   0,               $iW / 3,     $iH / 4,   $vStyle)
-    Local $cButtonLayoutFour   = GUICtrlCreateButton($sLayoutFour,    0,               $iH / 4,         $iW / 3,     $iH / 4,   $vStyle)
-    Local $cButtonLayoutFive   = GUICtrlCreateButton($sLayoutFive,    $iW / 3,         $iH / 4,         $iW / 3,     $iH / 4,   $vStyle)
-    Local $cButtonLayoutSix    = GUICtrlCreateButton($sLayoutSix,     ($iW / 3) * 2,   $iH / 4,         $iW / 3,     $iH / 4,   $vStyle)
-    Local $cButtonLayoutSeven  = GUICtrlCreateButton($sLayoutSeven,   ($iW / 3) * 0,   ($iH / 4) * 2,   $iW / 3,     $iH / 4,   $vStyle)
-    Local $cButtonLayoutEight  = GUICtrlCreateButton($sLayoutEight,   ($iW / 3) * 1,   ($iH / 4) * 2,   $iW / 3,     $iH / 4,   $vStyle)
-    Local $cButtonLayoutNine   = GUICtrlCreateButton($sLayoutNine,    ($iW / 3) * 2,   ($iH / 4) * 2,   $iW / 3,     $iH / 4,   $vStyle)
+    Local $cButtonLayoutOne    = GUICtrlCreateButton($sLayoutOne,      0,               0,               $iW / 3,   $iH / 4,   $vButtonStyle)
+    Local $cButtonLayoutTwo    = GUICtrlCreateButton($sLayoutTwo,      $iW / 3,         0,               $iW / 3,   $iH / 4,   $vButtonStyle)
+    Local $cButtonLayoutThree  = GUICtrlCreateButton($sLayoutThree,    ($iW / 3) * 2,   0,               $iW / 3,   $iH / 4,   $vButtonStyle)
+    Local $cButtonLayoutFour   = GUICtrlCreateButton($sLayoutFour,     0,               $iH / 4,         $iW / 3,   $iH / 4,   $vButtonStyle)
+    Local $cButtonLayoutFive   = GUICtrlCreateButton($sLayoutFive,     $iW / 3,         $iH / 4,         $iW / 3,   $iH / 4,   $vButtonStyle)
+    Local $cButtonLayoutSix    = GUICtrlCreateButton($sLayoutSix,      ($iW / 3) * 2,   $iH / 4,         $iW / 3,   $iH / 4,   $vButtonStyle)
+    Local $cButtonLayoutSeven  = GUICtrlCreateButton($sLayoutSeven,    ($iW / 3) * 0,   ($iH / 4) * 2,   $iW / 3,   $iH / 4,   $vButtonStyle)
+    Local $cButtonLayoutEight  = GUICtrlCreateButton($sLayoutEight,    ($iW / 3) * 1,   ($iH / 4) * 2,   $iW / 3,   $iH / 4,   $vButtonStyle)
+    Local $cButtonLayoutNine   = GUICtrlCreateButton($sLayoutNine,     ($iW / 3) * 2,   ($iH / 4) * 2,   $iW / 3,   $iH / 4,   $vButtonStyle)
 
-    Local $cButtonLayoutTen    = GUICtrlCreateButton($sLayoutTen,     0,               ($iH / 4) * 3,   $iW / 3,     $iH / 4,   $vStyle)
-    Local $cButtonLayoutEleven = GUICtrlCreateButton($sLayoutEleven,  $iW / 3,         ($iH / 4) * 3,   $iW / 3,     $iH / 4,   $vStyle)
-    Local $cButtonLayoutTwelve = GUICtrlCreateButton($sLayoutTwelve,  ($iW / 3) * 2,   ($iH / 4) * 3,   $iW / 3,     $iH / 4,   $vStyle)
+    Local $cButtonLayoutTen    = GUICtrlCreateButton($sLayoutTen,      0,               ($iH / 4) * 3,   $iW / 3,   $iH / 4,   $vButtonStyle)
+    Local $cButtonLayoutEleven = GUICtrlCreateButton($sLayoutEleven,   $iW / 3,         ($iH / 4) * 3,   $iW / 3,   $iH / 4,   $vButtonStyle)
+    Local $cButtonLayoutTwelve = GUICtrlCreateButton($sLayoutTwelve,   ($iW / 3) * 2,   ($iH / 4) * 3,   $iW / 3,   $iH / 4,   $vButtonStyle)
 
     GUICtrlSetState($cButtonLayoutOne, $GUI_FOCUS)
     GUISetState(@SW_SHOW)
