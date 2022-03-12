@@ -1,7 +1,7 @@
-Func _moveWindow($iX, $iY, $iW, $iH)
-    _createPreviewOverlayGui($iWidth * $iX, $iHeight * $iY, $iWidth * $iW, $iHeight * $iH)
+Func _MoveWindow($iX, $iY, $iW, $iH)
+    _CreatePreviewOverlayGui($iWidth * $iX, $iHeight * $iY, $iWidth * $iW, $iHeight * $iH)
 
-    Local $sWindowTitle = _getActiveWindowTitle()
+    Local $sWindowTitle = _GetActiveWindowTitle()
 
     If $sWindowTitle <> $sCancel Then
         Sleep(150)
@@ -10,13 +10,13 @@ Func _moveWindow($iX, $iY, $iW, $iH)
         WinMove($sWindowTitle, '', $iWidth * $iX, $iHeight * $iY, $iWidth * $iW, $iHeight * $iH)
     EndIf
 
-    _disposeGui()
+    _DisposeGui()
 EndFunc
 
-Func _moveWindowSpecialLayout($iX, $iY, $iW, $iH)
-    _createPreviewOverlayGui($iX, $iY, $iW, $iH)
+Func _MoveWindowSpecialLayout($iX, $iY, $iW, $iH)
+    _CreatePreviewOverlayGui($iX, $iY, $iW, $iH)
 
-    Local $sWindowTitle = _getActiveWindowTitle()
+    Local $sWindowTitle = _GetActiveWindowTitle()
 
     If $sWindowTitle <> $sCancel Then
         Sleep(150)
@@ -25,10 +25,10 @@ Func _moveWindowSpecialLayout($iX, $iY, $iW, $iH)
         WinMove($sWindowTitle, '', $iX, $iY, $iW, $iH)
     EndIf
 
-    _disposeGui()
+    _DisposeGui()
 EndFunc
 
-Func _createPreviewOverlayGui($iX, $iY, $iW, $iH)
+Func _CreatePreviewOverlayGui($iX, $iY, $iW, $iH)
     Local $sTitle = 'PreviewOverlayGui'
     Local $sWindowSizeAndPositionText = Round($iW) & 'x' & Round($iH) & ' (' & Round($iX) & ';' & Round($iY) & ')'
 
@@ -41,20 +41,20 @@ Func _createPreviewOverlayGui($iX, $iY, $iW, $iH)
     GUISetState(@SW_SHOW)
 EndFunc
 
-Func _getActiveWindowTitle()
+Func _GetActiveWindowTitle()
     Local $sWindowTitle = Null
 
     While True
         ; [Left mouse button]
-        If _isKeyReleased('01') Then
-            If _isMouseOnGui($hGui) Then
+        If _IsKeyReleased('01') Then
+            If _IsMouseOnGui($hGui) Then
                 $sWindowTitle = WinGetTitle('[ACTIVE]')
                 ExitLoop
             EndIf
         EndIf
 
         ; [ESC]
-        If _isKeyReleased('1B') Then
+        If _IsKeyReleased('1B') Then
             $sWindowTitle = $sCancel
             ExitLoop
         EndIf
@@ -63,7 +63,7 @@ Func _getActiveWindowTitle()
     Return $sWindowTitle
 EndFunc
 
-Func _getListOfVisibleWindows()
+Func _GetListOfVisibleWindows()
     Local Const $GWL_EXSTYLE       = 0xFFFFFFEC
     Local Const $WS_EX_TOOLWINDOW  = 0x00000080
     Local Const $WIN_STATE_VISIBLE = 2

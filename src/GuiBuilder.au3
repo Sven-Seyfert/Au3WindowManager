@@ -1,4 +1,4 @@
-Func _createLayoutChoiceGui()
+Func _CreateLayoutChoiceGui()
     Local $vButtonStyle = $BS_CENTER + $BS_MULTILINE + $BS_VCENTER
     Local $iW     = 400
     Local $iH     = 500
@@ -26,70 +26,70 @@ Func _createLayoutChoiceGui()
     While True
         Switch GUIGetMsg()
             Case $GUI_EVENT_CLOSE
-                If _isKeyPressed('1B') Then
-                    _disposeGui()
+                If _IsKeyPressed('1B') Then
+                    _DisposeGui()
                     Exit
                 EndIf
 
             Case $cButtonLayoutOne
-                _disposeGui()
-                _layoutOne()
-                _createLayoutChoiceGui()
+                _DisposeGui()
+                _LayoutOne()
+                _CreateLayoutChoiceGui()
 
             Case $cButtonLayoutTwo
-                _disposeGui()
-                _layoutTwo()
-                _createLayoutChoiceGui()
+                _DisposeGui()
+                _LayoutTwo()
+                _CreateLayoutChoiceGui()
 
             Case $cButtonLayoutThree
-                _disposeGui()
-                _layoutThree()
-                _createLayoutChoiceGui()
+                _DisposeGui()
+                _LayoutThree()
+                _CreateLayoutChoiceGui()
 
             Case $cButtonLayoutFour
-                _disposeGui()
-                _layoutFour()
-                _createLayoutChoiceGui()
+                _DisposeGui()
+                _LayoutFour()
+                _CreateLayoutChoiceGui()
 
             Case $cButtonLayoutFive
-                _disposeGui()
-                _layoutFive()
-                _createLayoutChoiceGui()
+                _DisposeGui()
+                _LayoutFive()
+                _CreateLayoutChoiceGui()
 
             Case $cButtonLayoutSix
-                _disposeGui()
-                _layoutSix()
-                _createLayoutChoiceGui()
+                _DisposeGui()
+                _LayoutSix()
+                _CreateLayoutChoiceGui()
 
             Case $cButtonLayoutSeven
-                _disposeGui()
-                _layoutSeven()
-                _createLayoutChoiceGui()
+                _DisposeGui()
+                _LayoutSeven()
+                _CreateLayoutChoiceGui()
 
             Case $cButtonLayoutEight
-                _disposeGui()
-                _layoutEight()
-                _createLayoutChoiceGui()
+                _DisposeGui()
+                _LayoutEight()
+                _CreateLayoutChoiceGui()
 
             Case $cButtonLayoutNine
-                _disposeGui()
-                _layoutNine()
-                _createLayoutChoiceGui()
+                _DisposeGui()
+                _LayoutNine()
+                _CreateLayoutChoiceGui()
 
             Case $cButtonLayoutTen
-                _disposeGui()
-                _layoutTen()
-                _createLayoutChoiceGui()
+                _DisposeGui()
+                _LayoutTen()
+                _CreateLayoutChoiceGui()
 
             Case $cButtonLayoutEleven
-                _disposeGui()
-                _layoutEleven()
-                _createLayoutChoiceGui()
+                _DisposeGui()
+                _LayoutEleven()
+                _CreateLayoutChoiceGui()
 
             Case $cButtonLayoutTwelve
-                _disposeGui()
-                _layoutTwelve()
-                _createLayoutChoiceGui()
+                _DisposeGui()
+                _LayoutTwelve()
+                _CreateLayoutChoiceGui()
         EndSwitch
     WEnd
 EndFunc

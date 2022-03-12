@@ -1,6 +1,6 @@
-Func _isKeyReleased($sKeyHexCode)
-    If _isKeyPressed($sKeyHexCode) Then
-        While _isKeyPressed($sKeyHexCode)
+Func _IsKeyReleased($sKeyHexCode)
+    If _IsKeyPressed($sKeyHexCode) Then
+        While _IsKeyPressed($sKeyHexCode)
             Sleep(10)
         WEnd
 
@@ -10,14 +10,14 @@ Func _isKeyReleased($sKeyHexCode)
     Return False
 EndFunc
 
-Func _isKeyPressed($sKeyHexCode)
+Func _IsKeyPressed($sKeyHexCode)
     Local Const $KF_UP = 0x8000
     Local $aReturn = DllCall('user32.dll', 'short', 'GetAsyncKeyState', 'int', '0x' & $sKeyHexCode)
 
     Return BitAND($aReturn[0], $KF_UP) <> 0
 EndFunc
 
-Func _isMouseOnGui($hGui)
+Func _IsMouseOnGui($hGui)
     Local $aMouse = MouseGetPos()
     Local $aGui   = WinGetPos($hGui)
 
@@ -31,6 +31,6 @@ Func _isMouseOnGui($hGui)
     Return False
 EndFunc
 
-Func _disposeGui()
+Func _DisposeGui()
     GUIDelete($hGui)
 EndFunc
